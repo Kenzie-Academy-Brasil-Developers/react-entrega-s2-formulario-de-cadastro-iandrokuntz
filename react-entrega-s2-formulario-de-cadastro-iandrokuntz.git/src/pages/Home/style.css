@@ -1,0 +1,22 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1Home{
+    font-size: 70px;
+    position: absolute;
+    top: 200px;
+}
+
+h3{
+    position: relative;
+    top: 20px;
+}
+
+.buttonHome{
+    position: absolute;
+    right: 35px;
+    top: 20px;
+}
