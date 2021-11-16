@@ -11,7 +11,7 @@ const Form = ({setIsLoggedIn}) => {
 
     const formSchema = yup.object().shape({
         name: yup.string().required("Name Required"),
-        email: yup.string().required("Email Required"),
+        email: yup.string().required("Email Required").matches(/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i, "Email is not valid"),
         password: yup.string().min(8, "minimum of 8 digits").matches(/[a-z]+/g,"Must contain at least one lowercase letter and one number.")
             .matches(/[^a-zA-Z0-9]+/g,"Must contain at least one special character")
             .matches(/[A-Z]+/g, "Must contain at least one capital letter."),
